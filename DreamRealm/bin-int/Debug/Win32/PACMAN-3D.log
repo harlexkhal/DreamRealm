@@ -1,0 +1,5 @@
+﻿  AnimatedMesh.cpp
+  main.cpp
+C:\dev\PACMAN-ENGINE\PACMAN-3D\src\main.cpp(62,49): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  Generating Code...
+  PACMAN-3D.vcxproj -> C:\dev\PACMAN-ENGINE\PACMAN-3D\bin\Debug\Win32\PACMAN-3D.exe

@@ -1,0 +1,9 @@
+﻿  glad.c
+  SkeletalMesh.cpp
+C:\Dev\dev\DreamRealm\DreamRealm\src\SkeletalMesh.cpp(399,29): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  main.cpp
+C:\Dev\dev\DreamRealm\DreamRealm\src\main.cpp(73,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Shader.cpp
+  Texture.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'glfw3.lib'

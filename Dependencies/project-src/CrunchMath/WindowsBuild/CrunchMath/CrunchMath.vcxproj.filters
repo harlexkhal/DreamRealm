@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\AABB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Mat4x4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Math_Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\OBB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Quaternion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Vec3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Vec4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\BVH\BVHSphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\CrunchMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\AABB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\GeometricUtility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Mat4x4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Math_Util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\OBB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Quaternion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Vec3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\Vec4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\BVH\BVHDS.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\src\BVH\BVHSphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\dev\DreamRealm\Dependencies\project-src\CrunchMath\CrunchMath\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{CA948207-37CE-38C4-B17C-BE6285628A69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{597777B4-0410-3648-BCFB-2CEC1106E5A2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
