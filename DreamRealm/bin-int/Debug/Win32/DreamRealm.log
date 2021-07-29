@@ -1,3 +1,7 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (C:\Dev\MyProjects\DreamRealm\DreamRealm\bin-int\Debug\Win32\) contains files shared from another project (PACMAN-3D.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  SkeletalMesh.cpp
+  main.cpp
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(62,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(81,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   DreamRealm.vcxproj -> C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\DreamRealm.exe

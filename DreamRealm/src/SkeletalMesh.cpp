@@ -131,7 +131,9 @@ void SkinnedMesh::InitMaterials(const aiScene* pScene, const std::string& Filena
 
 			if (pMaterial->GetTexture(aiTextureType_DIFFUSE, 0, &Path, NULL, NULL, NULL, NULL, NULL) == AI_SUCCESS) 
 			{
-				std::string FullPath = Dir + "/" + Path.data;
+				std::string File = Path.data;
+				std::size_t Found = File.find_last_of("/\\");
+				std::string FullPath = Dir + "/" + File.substr(Found + 1);
 				m_Textures[i] = new Texture();
 				m_Textures[i]->Load(FullPath.c_str());
 			}

@@ -47,7 +47,7 @@ int main() {
 	Shader MyShader;
 	MyShader.Load("src/Resource/SkeletalAnimationShaders.glsl");
 	SkinnedMesh MeshModel;
-	MeshModel.LoadMesh("src/Resource/Models/Sophia/CC_Standard_B.fbx");
+	MeshModel.LoadMesh("src/Resource/Models/Cheetah/cheetah run.fbx");
 
 	float LastFrame = 0.0f;
 
@@ -92,8 +92,8 @@ int main() {
 		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Specular"), 1.0f, 1.0f, 1.0f);
 		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.LightPosition"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
 		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Direction"), FPS.GetCameraFront().x, FPS.GetCameraFront().y, FPS.GetCameraFront().z);
-		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.Cutoff"), cos(CrunchMath::Radian(12.5)));
-		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.OuterCutoff"), cos(CrunchMath::Radian(17.5)));
+		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.Cutoff"), cos(CrunchMath::Radian(60.5)));
+		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.OuterCutoff"), cos(CrunchMath::Radian(100.5)));
 		glUniform1f(glGetUniformLocation(MyShader.Program, "material.Shine"), 32.0f);
 
 		glUniform3f(glGetUniformLocation(MyShader.Program, "ViewPos"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
