@@ -41,7 +41,8 @@ private:
 
 	float CursorLastX = 0.0f;
 	float CursorLastY = 0.0f;
-	float Heading =     0.0f;
+	//Due to the math on polar co-ordinates. looking forward directly at z-axis is about -90degrees(polar coordinates)
+	float Heading =    -90.0f;
 	float Pitch =       0.0f;
 	float FirstCursorUpdate = true;
 

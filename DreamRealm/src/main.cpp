@@ -47,7 +47,7 @@ int main() {
 	Shader MyShader;
 	MyShader.Load("src/Resource/StaticShaders.glsl");
 	Mesh MeshModel;
-	MeshModel.LoadMesh("src/Resource/Models/Sophia/CC_Standard_B.fbx");
+	MeshModel.LoadMesh();
 
 	float LastFrame = 0.0f;
 
@@ -69,7 +69,7 @@ int main() {
 		FPS.OnUpdate(Window, dt);
 
 		Model.SetToIdentity();
-		Model.Translate(CrunchMath::Vec3(10.0f, 0.0f, 10.0f));
+		Model.Translate(CrunchMath::Vec3(0.0f, 0.0f, 0.0f));
 		Model.Scale(CrunchMath::Vec3(1.0f, 1.0f, 1.0f));
 
 		MyShader.Use();
