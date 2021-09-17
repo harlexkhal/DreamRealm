@@ -31,7 +31,7 @@ public:
 	Mesh();
 	~Mesh();
 
-	void LoadMesh(const std::string& Filename);
+	void LoadMesh(const std::string& Filename = "");
 	void Render();
 
 private:

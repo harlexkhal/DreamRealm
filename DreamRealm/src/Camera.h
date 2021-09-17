@@ -34,17 +34,17 @@ private:
 	CrunchMath::Vec3 Front;
 	CrunchMath::Vec3 Up;
 
-	float FOV;
-	float AspectRatio;
-	float NearPlane;
-	float FarPlane;
+	float FOV =         0.0f;
+	float AspectRatio = 0.0f;
+	float NearPlane =   0.0f;
+	float FarPlane =    0.0f;
 
-	float CursorLastX;
-	float CursorLastY;
-	float Heading;
-	float Pitch;
+	float CursorLastX = 0.0f;
+	float CursorLastY = 0.0f;
+	float Heading =     0.0f;
+	float Pitch =       0.0f;
 	float FirstCursorUpdate = true;
 
-	float Velocity;
+	float Velocity = 0.0f;
 };
 

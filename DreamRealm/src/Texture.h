@@ -5,8 +5,10 @@ class Texture
 {
 public:
 	Texture();
-	void Load(const char* Rsrc);
+	Texture(uint32_t numoftex);
+	void Add(const char* Rsrc);
 	void Bind();
 
-    unsigned TextureId;
+    uint32_t TextureId[15];
+	uint32_t Index = 0;
 };

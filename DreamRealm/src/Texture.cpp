@@ -6,14 +6,22 @@
 
 #include "Texture.h"
 
-Texture::Texture()
+Texture::Texture(uint32_t numoftex)
 {
+	memset(TextureId, 0, sizeof(TextureId));
+	glGenTextures(numoftex, TextureId);
 }
 
-void Texture::Load(const char* Rsrc)
+Texture::Texture()
 {
-	glGenTextures(1, &TextureId);
-	glBindTexture(GL_TEXTURE_2D, TextureId);
+	glGenTextures(1, TextureId);
+}
+
+void Texture::Add(const char* Rsrc)
+{
+	glActiveTexture(GL_TEXTURE0 + Index);
+	glBindTexture(GL_TEXTURE_2D, TextureId[Index]);
+	Index++;
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -61,5 +69,9 @@ void Texture::Load(const char* Rsrc)
 
 void Texture::Bind()
 {
-	glBindTexture(GL_TEXTURE_2D, TextureId);
+	for (int i = 0; i < (Index + 1); i++)
+	{
+		glActiveTexture(GL_TEXTURE0 + i);
+		glBindTexture(GL_TEXTURE_2D, TextureId[i]);
+	}
 }

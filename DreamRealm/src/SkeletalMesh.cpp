@@ -39,7 +39,8 @@ void SkinnedMesh::Render()
 		glBindVertexArray(m_Entries[i].VAO);
 		const unsigned int MaterialIndex = m_Entries[i].MaterialIndex;
 
-		if (MaterialIndex < m_Textures.size() && m_Textures[MaterialIndex]) {
+		if (MaterialIndex < m_Textures.size() && m_Textures[MaterialIndex])
+		{
 			m_Textures[MaterialIndex]->Bind();
 		}
 
@@ -87,7 +88,8 @@ void SkinnedMesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 
 	LoadBones(Index, paiMesh, Vertices);
 
-	for (unsigned int i = 0; i < paiMesh->mNumFaces; i++) {
+	for (unsigned int i = 0; i < paiMesh->mNumFaces; i++)
+	{
 		const aiFace& Face = paiMesh->mFaces[i];
 		assert(Face.mNumIndices == 3);
 		Indices.push_back(Face.mIndices[0]);
@@ -123,7 +125,7 @@ void SkinnedMesh::InitMaterials(const aiScene* pScene, const std::string& Filena
 	{
 		const aiMaterial* pMaterial = pScene->mMaterials[i];
 
-		m_Textures[i] = NULL;
+		m_Textures[i] = nullptr;
 
 		if (pMaterial->GetTextureCount(aiTextureType_DIFFUSE) > 0)
 		{
@@ -134,8 +136,8 @@ void SkinnedMesh::InitMaterials(const aiScene* pScene, const std::string& Filena
 				std::string File = Path.data;
 				std::size_t Found = File.find_last_of("/\\");
 				std::string FullPath = Dir + "/" + File.substr(Found + 1);
-				m_Textures[i] = new Texture();
-				m_Textures[i]->Load(FullPath.c_str());
+				m_Textures[i] = new Texture(1);
+				m_Textures[i]->Add(FullPath.c_str());
 			}
 		}
 
@@ -416,7 +418,7 @@ void SkinnedMesh::SubMesh::Init(const std::vector<VertexData>& Vertices, const s
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * NumIndices, &Indices[0], GL_STATIC_DRAW);
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(VertexData), 0);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, m_Texture));
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, m_Texture));
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, m_Normal));
 	glVertexAttribIPointer(3, 4, GL_INT, sizeof(VertexData), (void*)offsetof(VertexData, IDs));
 	glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, Weights));

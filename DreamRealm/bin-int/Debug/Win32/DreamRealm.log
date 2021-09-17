@@ -3,5 +3,5 @@
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(62,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(81,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
   DreamRealm.vcxproj -> C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\DreamRealm.exe

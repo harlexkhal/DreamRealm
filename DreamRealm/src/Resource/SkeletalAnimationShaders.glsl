@@ -3,7 +3,7 @@
 #version 330 core
 
 layout(location = 0) in vec3 Position;
-layout(location = 1) in vec3 TexCoord;
+layout(location = 1) in vec2 TexCoord;
 layout(location = 2) in vec3 aNormal;
 layout(location = 3) in ivec4 BoneIDs;
 layout(location = 4) in vec4 Weights;
@@ -32,7 +32,7 @@ void main()
 	FragPos = vec3(Model * BoneTransform * vec4(Position, 1.0));
 	Normal = mat3(transpose(inverse(Model * BoneTransform))) * aNormal;
 
-	Texture = vec2(TexCoord.x, TexCoord.y);
+	Texture = TexCoord;
 }
 
 

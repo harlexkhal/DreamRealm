@@ -6,7 +6,7 @@
 
 #include "Shader.h"
 #include "Camera.h"
-#include "SkeletalMesh.h"
+#include "Mesh.h"
 
 Camera FPS(72.0f, 1200 / 720, 0.1f, 500.0f);
 
@@ -45,22 +45,22 @@ int main() {
 	glViewport(0, 0, 1200, 720);
 
 	Shader MyShader;
-	MyShader.Load("src/Resource/SkeletalAnimationShaders.glsl");
-	SkinnedMesh MeshModel;
-	MeshModel.LoadMesh("src/Resource/Models/Cheetah/cheetah run.fbx");
+	MyShader.Load("src/Resource/StaticShaders.glsl");
+	Mesh MeshModel;
+	MeshModel.LoadMesh("src/Resource/Models/Sophia/CC_Standard_B.fbx");
 
 	float LastFrame = 0.0f;
 
 	CrunchMath::Mat4x4 Model;
 	CrunchMath::Mat4x4 boneTransform;
-	FPS.SetCameraPosition(CrunchMath::Vec3(0.0f, 15.0f, 20.0f));
+	FPS.SetCameraPosition(CrunchMath::Vec3(0.0f, 0.0f, 10.0f));
 
 	glEnable(GL_DEPTH_TEST);
 	
 	while (!glfwWindowShouldClose(Window))
 	{
 		float CurrentFrame = glfwGetTime();//static_cast<float>(clock()) / CLOCKS_PER_SEC;
-		float dt = CurrentFrame - LastFrame;
+		float dt = 1.0f / 60.0f;//CurrentFrame - LastFrame;
 		LastFrame = CurrentFrame;
 
 		glClearColor(0.1f, 0.1f, 0.1f, 0.1f);
@@ -69,8 +69,8 @@ int main() {
 		FPS.OnUpdate(Window, dt);
 
 		Model.SetToIdentity();
-		Model.Translate(CrunchMath::Vec3(0.0f, 0.0f, 0.0f));
-		Model.Scale(CrunchMath::Vec3(0.1f, 0.1f, 0.1f));
+		Model.Translate(CrunchMath::Vec3(10.0f, 0.0f, 10.0f));
+		Model.Scale(CrunchMath::Vec3(1.0f, 1.0f, 1.0f));
 
 		MyShader.Use();
 		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
@@ -78,14 +78,14 @@ int main() {
 		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Model"), 1, GL_FALSE, &Model.Matrix[0][0]);
 
 		std::vector<CrunchMath::Mat4x4> Transforms;
-		MeshModel.BoneTransform(glfwGetTime(), Transforms);
+		/*MeshModel.BoneTransform(glfwGetTime(), Transforms);
 
 		for (unsigned int i = 0; i < Transforms.size(); i++) 
 		{
 			std::string BoneIndex = "gBones[" + std::to_string(i) + "]";
 			
 			glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, BoneIndex.c_str()), 1, GL_FALSE, &Transforms[i].Matrix[0][0]);
-		}
+		}*/
 
 		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Ambient"), 0.2f, 0.2f, 0.2f);
 		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Diffuse"), 0.5f, 0.5f, 0.5f);
