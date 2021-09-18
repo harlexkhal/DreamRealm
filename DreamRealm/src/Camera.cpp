@@ -60,16 +60,16 @@ void Camera::SetFOV(float fov)
 
 void Camera::CameraControl(GLFWwindow* window, float dt)
 {
-	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 		Position += (Velocity * dt) * Front;
 
-	else if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 		Position -= (Velocity * dt) * Front;
 
-	else if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		Position += (Velocity * dt) * CrunchMath::CrossProduct(Front, Up);
 
-	else if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+	else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		Position += (Velocity * dt) * CrunchMath::CrossProduct(Up, Front);
 }
 

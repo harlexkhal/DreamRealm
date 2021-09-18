@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -191,6 +191,11 @@
     <ClInclude Include="src\SkeletalMesh.h" />
     <ClInclude Include="src\Shader.h" />
     <ClInclude Include="src\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resource\SkeletalAnimationShaders.glsl" />
+    <None Include="src\Resource\SkyBox.glsl" />
+    <None Include="src\Resource\StaticShaders.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

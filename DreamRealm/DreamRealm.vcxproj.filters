@@ -117,4 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resource\SkeletalAnimationShaders.glsl" />
+    <None Include="src\Resource\StaticShaders.glsl" />
+    <None Include="src\Resource\SkyBox.glsl" />
+  </ItemGroup>
 </Project>

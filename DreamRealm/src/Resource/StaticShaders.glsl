@@ -26,8 +26,6 @@ void main()
 }
 
 
-
-
 #Shader Fragment
 
 #version 330 core
@@ -40,23 +38,16 @@ struct Material
 };
 uniform Material material;
 
-struct Lighting
+struct DirectionalLight 
 {
-	vec3 LightPosition;
-	vec3 Direction;
-
-	vec3 Ambient;
-	vec3 Diffuse;
-	vec3 Specular;
-
-	float Constant;
-	float Linear;
-	float Quadratic;
-
-	float Cutoff;
-	float OuterCutoff;
+    vec3 Direction;
+	
+    vec3 Ambient;
+    vec3 Diffuse;
+    vec3 Specular;
 };
-uniform Lighting LightSource;
+uniform DirectionalLight DirLight;
+
 
 out vec4 FragColor;
 
@@ -65,41 +56,30 @@ in vec3 FragPos;
 in vec2 Texture;
 
 uniform vec3 Light;
-uniform vec3 ObjectColor;
 uniform vec3 ViewPos;
 
+vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir);
 
 void main()
 {	
-		vec3 Ambient = LightSource.Ambient * texture(material.Diffuse, Texture).rgb;
+		vec3 Ambient = DirLight.Ambient * texture(material.Diffuse, Texture).rgb;
 
 		//Diffuse
 		vec3 SurfaceNormal = normalize(Normal);
-		vec3 LightDir = normalize(LightSource.LightPosition - FragPos);
-		float Diff = max(dot(SurfaceNormal, LightDir), 0.0);
-		vec3 Diffuse = LightSource.Diffuse * Diff * texture(material.Diffuse, Texture).rgb;
+		vec3 LightDir = normalize(ViewPos - FragPos);
 
-		//Specular
-		vec3 ViewDir = normalize(ViewPos - FragPos);
-		vec3 Reflect = reflect(-LightDir, SurfaceNormal);
-		float Spec = pow(max(dot(ViewDir, Reflect), 0.0), material.Shine);
-		vec3 Specular = LightSource.Specular * Spec * texture(material.Specular, Texture).rgb;
+		vec3 Result = CalculateDirectionalLight(DirLight, SurfaceNormal, LightDir);
+		FragColor = vec4(Result, 0.1);
+}
 
-		float theta = dot(LightDir, normalize(-LightSource.Direction));
-		float epsilon = (LightSource.Cutoff - LightSource.OuterCutoff);
-		float Intensity = clamp((theta - LightSource.OuterCutoff) / epsilon, 0.0, 1.0);
-
-		Diffuse *= Intensity;
-		Specular *= Intensity;
-
-		float Distance = length(LightSource.LightPosition - FragPos);
-		float Attenuation = 1.0f / (1.0f + (0.09 * Distance) + (0.032 * (Distance * Distance)));
-
-		Ambient *= Attenuation;
-		Diffuse *= Attenuation;
-		Specular *= Attenuation;
-
-		vec3 Result = (Specular + Ambient + Diffuse);
-		FragColor = vec4(Result, 1.0);
-
+vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir)
+{
+    vec3 lightDir = normalize(-light.Direction);
+    float diff = max(dot(normal, lightDir), 0.0);
+    vec3 reflectDir = reflect(-lightDir, normal);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.Shine);
+    vec3 ambient = light.Ambient * vec3(texture(material.Diffuse, Texture));
+    vec3 diffuse = light.Diffuse * diff * vec3(texture(material.Diffuse, Texture));
+    vec3 specular = light.Specular * spec * vec3(texture(material.Specular, Texture));
+    return (ambient + diffuse + specular);
 }

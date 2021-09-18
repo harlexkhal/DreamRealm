@@ -1,11 +1,13 @@
 #pragma once
 #include <string>
+#include <vector>
 
 class Texture
 {
 public:
 	Texture();
 	Texture(uint32_t numoftex);
+	void AddCubeMap(std::vector<std::string> links);
 	void Add(const char* Rsrc);
 	void Bind();
 

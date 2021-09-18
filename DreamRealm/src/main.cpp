@@ -45,7 +45,7 @@ int main() {
 	glViewport(0, 0, 1200, 720);
 
 	Shader MyShader;
-	MyShader.Load("src/Resource/StaticShaders.glsl");
+	MyShader.Load("src/Resource/SkyBox.glsl");
 	Mesh MeshModel;
 	MeshModel.LoadMesh();
 
@@ -75,7 +75,7 @@ int main() {
 		MyShader.Use();
 		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
 		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
-		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Model"), 1, GL_FALSE, &Model.Matrix[0][0]);
+		//glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Model"), 1, GL_FALSE, &Model.Matrix[0][0]);
 
 		std::vector<CrunchMath::Mat4x4> Transforms;
 		/*MeshModel.BoneTransform(glfwGetTime(), Transforms);
@@ -87,13 +87,10 @@ int main() {
 			glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, BoneIndex.c_str()), 1, GL_FALSE, &Transforms[i].Matrix[0][0]);
 		}*/
 
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Ambient"), 0.2f, 0.2f, 0.2f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Diffuse"), 0.5f, 0.5f, 0.5f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Specular"), 1.0f, 1.0f, 1.0f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.LightPosition"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Direction"), FPS.GetCameraFront().x, FPS.GetCameraFront().y, FPS.GetCameraFront().z);
-		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.Cutoff"), cos(CrunchMath::Radian(60.5)));
-		glUniform1f(glGetUniformLocation(MyShader.Program, "LightSource.OuterCutoff"), cos(CrunchMath::Radian(100.5)));
+		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Ambient"), 1.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Diffuse"), 0.0f, 0.0f, 0.0f);
+		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Specular"), 0.0f, 0.0f, 0.0f);
+		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Direction"), 0.0f, 3.0f, 0.0f);
 		glUniform1f(glGetUniformLocation(MyShader.Program, "material.Shine"), 32.0f);
 
 		glUniform3f(glGetUniformLocation(MyShader.Program, "ViewPos"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);

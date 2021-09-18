@@ -164,9 +164,19 @@ void Mesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 void Mesh::InitMaterials(const aiScene* pScene, const std::string& Filename)
 {
 	//Loading default Texture...
-	m_Textures[0] = new Texture(2);
-	m_Textures[0]->Add("src/Resource/Defaults/Textures/wood.png");
-	m_Textures[0]->Add("src/Resource/Defaults/Textures/metal.png");
+	m_Textures[0] = new Texture();
+	std::vector<std::string> faces
+	{
+		"src/Resource/Defaults/Textures/skybox/right.bmp",
+		"src/Resource/Defaults/Textures/skybox/left.bmp",
+		"src/Resource/Defaults/Textures/skybox/top.bmp",
+		"src/Resource/Defaults/Textures/skybox/bottom.bmp",
+		"src/Resource/Defaults/Textures/skybox/front.bmp",
+		"src/Resource/Defaults/Textures/skybox/back.bmp"
+	};
+
+	m_Textures[0]->AddCubeMap(faces);
+	//m_Textures[0]->Add("src/Resource/Defaults/Textures/metal.png");
 
 	if (pScene)
 	{

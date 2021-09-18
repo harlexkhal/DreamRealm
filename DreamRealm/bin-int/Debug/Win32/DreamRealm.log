@@ -1,23 +1,6 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (C:\Dev\MyProjects\DreamRealm\DreamRealm\bin-int\Debug\Win32\) contains files shared from another project (PACMAN-3D.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Camera.cpp
-C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Camera.cpp(29,26): warning C4305: 'initializing': truncation from 'double' to 'float'
   main.cpp
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(15,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Dev\MyProjects\DreamRealm\DreamRealm\src\main.cpp(62,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-glfw3.lib(context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(context.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(init.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(input.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(input.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(monitor.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(vulkan.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(vulkan.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(window.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_init.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_init.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_joystick.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_joystick.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_monitor.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_monitor.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_time.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_time.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(win32_tls.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(win32_tls.obj)' or at ''; linking object as if no debug info
-glfw3.lib(win32_window.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(win32_window.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(wgl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(wgl_context.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
-glfw3.lib(egl_context.obj) : warning LNK4099: PDB 'glfw.pdb' was not found with 'glfw3.lib(egl_context.obj)' or at 'C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\glfw.pdb'; linking object as if no debug info
   DreamRealm.vcxproj -> C:\Dev\MyProjects\DreamRealm\DreamRealm\bin\Debug\Win32\DreamRealm.exe
