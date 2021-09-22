@@ -6,6 +6,7 @@ class Texture
 {
 public:
 	Texture();
+	~Texture();
 	Texture(uint32_t numoftex);
 	void AddCubeMap(std::vector<std::string> links);
 	void Add(const char* Rsrc);

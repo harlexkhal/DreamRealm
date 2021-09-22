@@ -31,7 +31,6 @@ void main()
 #version 330 core
 struct Material
 {
-	vec3 Ambient;
     sampler2D Diffuse;
 	sampler2D Specular;
 	float Shine;

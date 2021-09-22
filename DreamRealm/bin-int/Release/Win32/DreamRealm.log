@@ -1,7 +1,0 @@
-﻿  glad.c
-  SkeletalMesh.cpp
-  main.cpp
-C:\Dev\dev\DreamRealm\DreamRealm\src\main.cpp(73,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Shader.cpp
-  Texture.cpp
-LINK : fatal error LNK1181: cannot open input file 'C:\Dev\MyProjects\DreamRealm\Dependencies\project-src\CrunchMath\WindowsBuild\CrunchMath\Release\CrunchMath.lib'

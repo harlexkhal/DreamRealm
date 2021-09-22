@@ -1,5 +1,5 @@
 #pragma once
-#include "CrunchMath/CrunchMath.h"
+#include "CrunchMath.h"
 
 //Temporary
 #include "GLFW/glfw3.h"

@@ -5,25 +5,9 @@
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
-#include "CrunchMath/CrunchMath.h"
 
 #include "Texture.h"
-
-struct Vertex
-{
-	CrunchMath::Vec3 m_pos;
-	CrunchMath::Vec3 m_tex;
-	CrunchMath::Vec3 m_normal;
-
-	Vertex() {}
-
-	Vertex(const CrunchMath::Vec3 pos, const CrunchMath::Vec3 tex, const CrunchMath::Vec3 normal)
-	{
-		m_pos = pos;
-		m_tex = tex;
-		m_normal = normal;
-	}
-};
+#include "VertexData.h"
 
 class Mesh
 {
@@ -32,6 +16,8 @@ public:
 	~Mesh();
 
 	void LoadMesh(const std::string& Filename = "");
+	void LoadTexture(const char* File);
+	void LoadTextureOverrite(const char* File);
 	void Render();
 
 private:
@@ -46,7 +32,7 @@ private:
 		SubMesh() {};
 		~SubMesh() {};
 
-		void Init(const std::vector<Vertex>& Vertices, const std::vector<unsigned int>& Indices);
+		void Init(const std::vector<StaticVertexData>& Vertices, const std::vector<unsigned int>& Indices);
 
 		unsigned int VBO;
 		unsigned int EBO;
@@ -57,5 +43,5 @@ private:
 	};
 
 	std::vector<SubMesh> m_Entries;
-	std::vector<Texture*> m_Textures;
+	std::vector<Texture*> m_Textures{ 0 };
 };

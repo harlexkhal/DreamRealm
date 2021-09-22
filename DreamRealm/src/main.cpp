@@ -44,19 +44,48 @@ int main() {
 	}
 	glViewport(0, 0, 1200, 720);
 
-	Shader MyShader;
-	MyShader.Load("src/Resource/SkyBox.glsl");
-	Mesh MeshModel;
-	MeshModel.LoadMesh();
+	Shader SkyDome_Shader;
+	SkyDome_Shader.Load("src/Resource/Sky.glsl");
+	Mesh SkyDome_Mesh;
+	SkyDome_Mesh.LoadMesh("src/Resource/Models/planet/planet.obj");
+	SkyDome_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise5.bmp");
+	CrunchMath::Mat4x4 SkyDomeModel(1.0f);
+	SkyDomeModel.Translate(CrunchMath::Vec3(0.0f, -3.0f, 0.0f));
+	SkyDomeModel.Scale(CrunchMath::Vec3(100.0f, 100.0f, 500.0f));
+	
+	Shader Sun_Shader;
+	Sun_Shader.Load("src/Resource/Sun.glsl");
+	CrunchMath::Mat4x4 SunModel(1.0f);
+	SunModel.Translate(CrunchMath::Vec3(0.0f, 42.0f, -100.0f));
+	SunModel.Scale(CrunchMath::Vec3(1.0f, 1.0f, 1.0f));
 
-	float LastFrame = 0.0f;
+	Shader Terrain_Shader;
+	Terrain_Shader.Load("src/Resource/StaticShaders.glsl");
+	Mesh Terrain_Mesh;
+	Terrain_Mesh.LoadMesh();
+	Terrain_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise-texture4.jpg");
+	CrunchMath::Mat4x4 TerrainModel(1.0f);
+	TerrainModel.Translate(CrunchMath::Vec3(0.0f, 0.0f, 0.0f));
+	TerrainModel.Scale(CrunchMath::Vec3(100.0f, 0.01f, 100.0f));
 
-	CrunchMath::Mat4x4 Model;
+	Shader Object1_Shader;
+	Object1_Shader.Load("src/Resource/StaticShaders.glsl");
+	Mesh Object1_Mesh;
+	Object1_Mesh.LoadMesh();
+	Object1_Mesh.LoadTexture("src/Resource/Defaults/Textures/wood.png");
+	CrunchMath::Mat4x4 Object1Model(1.0f);
+	Object1Model.Translate(CrunchMath::Vec3(0.0f, 10.3f, 0.0f));
+	Object1Model.Scale(CrunchMath::Vec3(10.0f, 10.0f, 10.0f));
+
+	float LastFrame = 0.1f;	
+
 	CrunchMath::Mat4x4 boneTransform;
-	FPS.SetCameraPosition(CrunchMath::Vec3(0.0f, 0.0f, 10.0f));
+	FPS.SetCameraPosition(CrunchMath::Vec3(15.0f, 30.0f, 40.0f));
 
 	glEnable(GL_DEPTH_TEST);
-	
+	float bias = -0.5f;
+	float nscale = -1.0f;
+	float Rotate = 0.0f;
 	while (!glfwWindowShouldClose(Window))
 	{
 		float CurrentFrame = glfwGetTime();//static_cast<float>(clock()) / CLOCKS_PER_SEC;
@@ -66,36 +95,78 @@ int main() {
 		glClearColor(0.1f, 0.1f, 0.1f, 0.1f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+		if (glfwGetKey(Window, GLFW_KEY_UP) == GLFW_PRESS)
+			bias += 0.1 * dt;
+		if (glfwGetKey(Window, GLFW_KEY_DOWN) == GLFW_PRESS)
+			bias -= 0.1 * dt;
+
+		nscale += 0.009 * dt;
+
+		if (nscale >= 1.0)
+			nscale = -1.0f;
+
 		FPS.OnUpdate(Window, dt);
 
-		Model.SetToIdentity();
-		Model.Translate(CrunchMath::Vec3(0.0f, 0.0f, 0.0f));
-		Model.Scale(CrunchMath::Vec3(1.0f, 1.0f, 1.0f));
+		glDepthMask(GL_FALSE);
+		{
+			SkyDomeModel.Rotate(CrunchMath::Vec3(0.0f, 1.0f, 0.0f), Rotate);
+			SkyDome_Shader.Use();
+			glUniform1f(glGetUniformLocation(SkyDome_Shader.Program, "Bias"), bias);
+			glUniform1f(glGetUniformLocation(SkyDome_Shader.Program, "nscale"), nscale);
+			glUniformMatrix4fv(glGetUniformLocation(SkyDome_Shader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(SkyDome_Shader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(SkyDome_Shader.Program, "Model"), 1, GL_FALSE, &SkyDomeModel.Matrix[0][0]);
+			SkyDome_Mesh.Render();
+		}
+		glDepthMask(GL_TRUE);
 
-		MyShader.Use();
-		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
-		glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
-		//glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, "Model"), 1, GL_FALSE, &Model.Matrix[0][0]);
+		{
+			Sun_Shader.Use();
+			glUniformMatrix4fv(glGetUniformLocation(Sun_Shader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Sun_Shader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Sun_Shader.Program, "Model"), 1, GL_FALSE, &SunModel.Matrix[0][0]);
+			SkyDome_Mesh.Render();
+		}
+
+		{
+		    Terrain_Shader.Use();
+		    glUniform3f(glGetUniformLocation(Terrain_Shader.Program, "DirLight.Ambient"), 0.7f, 0.7f, 0.7f);
+		    glUniform3f(glGetUniformLocation(Terrain_Shader.Program, "DirLight.Diffuse"), 0.5f, 0.5f, 0.5f);
+		    glUniform3f(glGetUniformLocation(Terrain_Shader.Program, "DirLight.Specular"), 1.0f, 1.0f, 1.0f);
+		    glUniform3f(glGetUniformLocation(Terrain_Shader.Program, "LightSource.Direction"), 0.0f, 3.0f, 0.0f);
+		    glUniform1f(glGetUniformLocation(Terrain_Shader.Program, "material.Shine"), 32.0f);  
+		    glUniform3f(glGetUniformLocation(Terrain_Shader.Program, "ViewPos"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
+			
+			glUniformMatrix4fv(glGetUniformLocation(Terrain_Shader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Terrain_Shader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Terrain_Shader.Program, "Model"), 1, GL_FALSE, &TerrainModel.Matrix[0][0]);
+			Terrain_Mesh.Render();
+		}
+
+		{
+			Object1_Shader.Use();
+			glUniform3f(glGetUniformLocation(Object1_Shader.Program, "DirLight.Ambient"), 0.7f, 0.7f, 0.7f);
+			glUniform3f(glGetUniformLocation(Object1_Shader.Program, "DirLight.Diffuse"), 0.5f, 0.5f, 0.5f);
+			glUniform3f(glGetUniformLocation(Object1_Shader.Program, "DirLight.Specular"), 1.0f, 1.0f, 1.0f);
+			glUniform3f(glGetUniformLocation(Object1_Shader.Program, "LightSource.Direction"), 0.0f, 3.0f, 0.0f);
+			glUniform1f(glGetUniformLocation(Object1_Shader.Program, "material.Shine"), 32.0f);
+			glUniform3f(glGetUniformLocation(Object1_Shader.Program, "ViewPos"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
+
+			glUniformMatrix4fv(glGetUniformLocation(Object1_Shader.Program, "Projection"), 1, GL_FALSE, &FPS.GetProjection().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Object1_Shader.Program, "View"), 1, GL_FALSE, &FPS.GetView().Matrix[0][0]);
+			glUniformMatrix4fv(glGetUniformLocation(Object1_Shader.Program, "Model"), 1, GL_FALSE, &Object1Model.Matrix[0][0]);
+			Object1_Mesh.Render();
+		}
 
 		std::vector<CrunchMath::Mat4x4> Transforms;
 		/*MeshModel.BoneTransform(glfwGetTime(), Transforms);
 
-		for (unsigned int i = 0; i < Transforms.size(); i++) 
+		for (unsigned int i = 0; i < Transforms.size(); i++)
 		{
 			std::string BoneIndex = "gBones[" + std::to_string(i) + "]";
-			
+
 			glUniformMatrix4fv(glGetUniformLocation(MyShader.Program, BoneIndex.c_str()), 1, GL_FALSE, &Transforms[i].Matrix[0][0]);
 		}*/
-
-		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Ambient"), 1.0f, 1.0f, 1.0f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Diffuse"), 0.0f, 0.0f, 0.0f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "DirLight.Specular"), 0.0f, 0.0f, 0.0f);
-		glUniform3f(glGetUniformLocation(MyShader.Program, "LightSource.Direction"), 0.0f, 3.0f, 0.0f);
-		glUniform1f(glGetUniformLocation(MyShader.Program, "material.Shine"), 32.0f);
-
-		glUniform3f(glGetUniformLocation(MyShader.Program, "ViewPos"), FPS.GetPositiion().x, FPS.GetPositiion().y, FPS.GetPositiion().z);
-
-		MeshModel.Render();
 
 		glfwPollEvents();
 		glfwSwapBuffers(Window);

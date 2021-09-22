@@ -5,49 +5,11 @@
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
-#include "CrunchMath/CrunchMath.h"
+#include "CrunchMath.h"
 #include <map>
 #include "Texture.h"
 
-struct VertexData
-{
-	CrunchMath::Vec3 m_Position;
-	CrunchMath::Vec3 m_Texture;
-	CrunchMath::Vec3 m_Normal;
-
-	unsigned int  IDs[4];
-	float Weights[4];
-
-	VertexData(const CrunchMath::Vec3 Pos, const CrunchMath::Vec3 Tex, const CrunchMath::Vec3 Normal)
-	{
-		m_Position = Pos;
-		m_Texture = Tex;
-		m_Normal = Normal;
-
-		Reset();
-	}
-
-	void Reset()
-	{
-		memset(IDs, 0, sizeof(IDs));
-		memset(Weights, 0, sizeof(Weights));
-	}
-
-	void AddBoneData(unsigned int BoneID, float Weight)
-	{
-		for (unsigned int i = 0; i < (sizeof(IDs) / sizeof(IDs[0])); i++)
-		{
-			if (Weights[i] == 0.0f)
-			{
-				IDs[i] = BoneID;
-				Weights[i] = Weight;
-				return;
-			}
-		}
-		//should never get here more bones than we have space for...
-		//assert(0);
-	}
-};
+#include "VertexData.h"
 
 class SkinnedMesh
 {
@@ -65,7 +27,7 @@ private:
 	void InitMesh(unsigned int Index, const aiMesh* paiMesh);
 
 	void InitMaterials(const aiScene* pScene, const std::string& Filename);
-	void LoadBones(unsigned int MeshIndex, const aiMesh* paiMesh, std::vector<VertexData>& Vertices);
+	void LoadBones(unsigned int MeshIndex, const aiMesh* paiMesh, std::vector<SkeletalVertexData>& Vertices);
 
 	const aiNodeAnim* FindNodeAnim(const aiAnimation* pAnimation, const std::string NodeName);
 	unsigned int FindScaling(float AnimationTime, const aiNodeAnim* pNodeAnim);
@@ -85,7 +47,7 @@ private:
 		SubMesh() {};
 		~SubMesh() {};
 
-		void Init(const std::vector<VertexData>& Vertices, const std::vector<unsigned int>& Indices);
+		void Init(const std::vector<SkeletalVertexData>& Vertices, const std::vector<unsigned int>& Indices);
 
 		unsigned int VAO;
 		unsigned int NumIndices = 0;
@@ -96,11 +58,6 @@ private:
 	{
 		CrunchMath::Mat4x4 BoneOffset;
 		CrunchMath::Mat4x4 FinalTransformation;
-		BoneInfo()
-		{
-			//memset(&BoneOffset, 0, sizeof(BoneOffset));
-			//memset(&FinalTransformation, 0, sizeof(FinalTransformation));
-		}
 	};
 
 	std::vector<SubMesh> m_Entries;

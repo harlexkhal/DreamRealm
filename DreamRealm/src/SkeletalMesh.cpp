@@ -68,7 +68,7 @@ void SkinnedMesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 {
 	m_Entries[Index].MaterialIndex = paiMesh->mMaterialIndex;
 
-	std::vector<VertexData> Vertices;
+	std::vector<SkeletalVertexData> Vertices;
 	std::vector<unsigned int> Indices;
 
 	const aiVector3D Zero3D(0.0f, 0.0f, 0.0f);
@@ -79,7 +79,7 @@ void SkinnedMesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 		const aiVector3D* pTexCoord = paiMesh->HasTextureCoords(0) ? &(paiMesh->mTextureCoords[0][i]) : &Zero3D;
 		const aiVector3D* pNormal = &(paiMesh->mNormals[i]);
 
-		VertexData v(CrunchMath::Vec3(pPos->x, pPos->y, pPos->z),
+		SkeletalVertexData v(CrunchMath::Vec3(pPos->x, pPos->y, pPos->z),
 			         CrunchMath::Vec3(pTexCoord->x, pTexCoord->y, 0.0f),
 			         CrunchMath::Vec3(pNormal->x, pNormal->y, pNormal->z));
 
@@ -150,7 +150,7 @@ void SkinnedMesh::InitMaterials(const aiScene* pScene, const std::string& Filena
 	}
 }
 
-void SkinnedMesh::LoadBones(unsigned int MeshIndex, const aiMesh* paiMesh, std::vector<VertexData>& Vertices)
+void SkinnedMesh::LoadBones(unsigned int MeshIndex, const aiMesh* paiMesh, std::vector<SkeletalVertexData>& Vertices)
 {
 	for (unsigned int i = 0; i < paiMesh->mNumBones; i++)
 	{
@@ -399,7 +399,7 @@ void SkinnedMesh::ReadNodeHeirarchy(float AnimationTime, const aiNode* pNode, co
 	}
 }
 
-void SkinnedMesh::SubMesh::Init(const std::vector<VertexData>& Vertices, const std::vector<unsigned int>& Indices)
+void SkinnedMesh::SubMesh::Init(const std::vector<SkeletalVertexData>& Vertices, const std::vector<unsigned int>& Indices)
 {
 	NumIndices = Indices.size();
 
@@ -414,14 +414,14 @@ void SkinnedMesh::SubMesh::Init(const std::vector<VertexData>& Vertices, const s
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 
-	glBufferData(GL_ARRAY_BUFFER, sizeof(VertexData) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(SkeletalVertexData) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * NumIndices, &Indices[0], GL_STATIC_DRAW);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(VertexData), 0);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, m_Texture));
-	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, m_Normal));
-	glVertexAttribIPointer(3, 4, GL_INT, sizeof(VertexData), (void*)offsetof(VertexData, IDs));
-	glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, sizeof(VertexData), (void*)offsetof(VertexData, Weights));
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(SkeletalVertexData), (void*)offsetof(SkeletalVertexData, m_Position));
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(SkeletalVertexData), (void*)offsetof(SkeletalVertexData, m_Texture));
+	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(SkeletalVertexData), (void*)offsetof(SkeletalVertexData, m_Normal));
+	glVertexAttribIPointer(3, 4, GL_INT, sizeof(SkeletalVertexData), (void*)offsetof(SkeletalVertexData, IDs));
+	glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, sizeof(SkeletalVertexData), (void*)offsetof(SkeletalVertexData, Weights));
 
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);

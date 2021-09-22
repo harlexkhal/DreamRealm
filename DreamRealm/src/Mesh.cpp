@@ -26,6 +26,13 @@ void Mesh::LoadMesh(const std::string& Filename)
 	InitFromScene(pScene, Filename);
 }
 
+void Mesh::LoadTexture(const char* File)
+{
+	m_Entries[0].MaterialIndex = 0;
+	m_Textures[0] = new Texture();
+	m_Textures[0]->Add(File);	
+}
+
 void Mesh::Render()
 {
 	for (unsigned int i = 0; i < m_Entries.size(); i++)
@@ -71,37 +78,37 @@ void Mesh::InitFromScene(const aiScene* pScene, const std::string& Filename)
 void Mesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 {
 	//Temporary LoadDefault mesh...
-	std::vector<Vertex> Vertices =
+	std::vector<StaticVertexData> Vertices =
 	{
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, -1.0f),  CrunchMath::Vec3(0.0f, 0.0f, 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),   CrunchMath::Vec3(0.0f, 1.0f , 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(1.0f, 1.0f, 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, -1.0f),  CrunchMath::Vec3(0.0f, 0.0f, 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),   CrunchMath::Vec3(0.0f, 1.0f , 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(1.0f, 1.0f, 0.0f),  CrunchMath::Vec3(0.0f, 1.0f, 0.0f)),
 																			  
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, -1.0f, 0.0f)),
 																			  
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f),   CrunchMath::Vec3(-1.0f, 0.0f, 0.0f)),
 																			   
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 1.0, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 1.0, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f)),
 																			   
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, -1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, -1.0f), CrunchMath::Vec3(1.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, -1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, -1.0f), CrunchMath::Vec3(0.0f, 0.0, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, -1.0f)),
 																			   							 
-		Vertex(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
-		Vertex(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
-		Vertex(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f))
+		StaticVertexData(CrunchMath::Vec3(-1.0f, -1.0f, 1.0f), CrunchMath::Vec3(1.0f, 1.0, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, -1.0f, 1.0f), CrunchMath::Vec3(0.0f, 1.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
+		StaticVertexData(CrunchMath::Vec3(1.0f, 1.0f, 1.0f),  CrunchMath::Vec3(0.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f)),
+		StaticVertexData(CrunchMath::Vec3(-1.0f, 1.0f, 1.0f), CrunchMath::Vec3(1.0f, 0.0f, 0.0f), CrunchMath::Vec3(0.0f, 0.0f, 1.0f))
 	};
 
 	std::vector<unsigned int> Indices =
@@ -125,6 +132,8 @@ void Mesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 		23,20,22
 	};
 
+	m_Entries[Index].MaterialIndex = 0;
+
 	if (paiMesh)
 	{
 		//If a loaded mesh was found clear all attempted effort to create a default mesh
@@ -141,7 +150,7 @@ void Mesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 			const aiVector3D* pNormal = &(paiMesh->mNormals[i]);
 			const aiVector3D* pTexCoord = paiMesh->HasTextureCoords(0) ? &(paiMesh->mTextureCoords[0][i]) : &Zero3D;
 
-			Vertex v(CrunchMath::Vec3(pPos->x, pPos->y, pPos->z),
+			StaticVertexData v(CrunchMath::Vec3(pPos->x, pPos->y, pPos->z),
 				CrunchMath::Vec3(pTexCoord->x, pTexCoord->y, 0.0f),
 				CrunchMath::Vec3(pNormal->x, pNormal->y, pNormal->z));
 
@@ -163,26 +172,8 @@ void Mesh::InitMesh(unsigned int Index, const aiMesh* paiMesh)
 
 void Mesh::InitMaterials(const aiScene* pScene, const std::string& Filename)
 {
-	//Loading default Texture...
-	m_Textures[0] = new Texture();
-	std::vector<std::string> faces
-	{
-		"src/Resource/Defaults/Textures/skybox/right.bmp",
-		"src/Resource/Defaults/Textures/skybox/left.bmp",
-		"src/Resource/Defaults/Textures/skybox/top.bmp",
-		"src/Resource/Defaults/Textures/skybox/bottom.bmp",
-		"src/Resource/Defaults/Textures/skybox/front.bmp",
-		"src/Resource/Defaults/Textures/skybox/back.bmp"
-	};
-
-	m_Textures[0]->AddCubeMap(faces);
-	//m_Textures[0]->Add("src/Resource/Defaults/Textures/metal.png");
-
 	if (pScene)
 	{
-		//If there was a scene that means. its most likely it would have textures in it so we delete the default textures loaded
-		delete m_Textures[0];
-
 		std::string::size_type SlashIndex = Filename.find_last_of("/");
 		std::string Dir;
 
@@ -219,15 +210,16 @@ void Mesh::InitMaterials(const aiScene* pScene, const std::string& Filename)
 					std::string FullPath = Dir + "/" + File.substr(Found + 1);
 					m_Textures[i] = new Texture(1);
 					m_Textures[i]->Add(FullPath.c_str());
+
+					//Temporary I need to be able to get if texture is valid or not from texture data member through an accessor member function
+					if (m_Textures[i]->TextureId[0] == -1)
+					{
+						delete m_Textures[i];
+						std::vector<Texture*>::iterator it = m_Textures.begin();
+						m_Textures.erase(it);
+					}
 				}
 			}
-
-			/*Load a white texture in case the Mesh does not include its own texture
-			if (!m_Textures[i])
-			{
-				m_Textures[i] = new Texture();
-				m_Textures[i]->Load("../Content/white.png");
-			}*/
 		}
 	}
 }
@@ -236,7 +228,7 @@ void Mesh::Clear()
 {
 }
 
-void Mesh::SubMesh::Init(const std::vector<Vertex>& Vertices, const std::vector<unsigned int>& Indices)
+void Mesh::SubMesh::Init(const std::vector<StaticVertexData>& Vertices, const std::vector<unsigned int>& Indices)
 {
 	NumIndices = Indices.size();
 
@@ -248,12 +240,12 @@ void Mesh::SubMesh::Init(const std::vector<Vertex>& Vertices, const std::vector<
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 
-	glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);	
+	glBufferData(GL_ARRAY_BUFFER, sizeof(StaticVertexData) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);	
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * NumIndices, &Indices[0], GL_STATIC_DRAW);
 
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_tex));
-	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_normal));
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(StaticVertexData), (void*)offsetof(StaticVertexData, m_Position));
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, sizeof(StaticVertexData), (void*)offsetof(StaticVertexData, m_Texture));
+	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(StaticVertexData), (void*)offsetof(StaticVertexData, m_Normal));
 
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);

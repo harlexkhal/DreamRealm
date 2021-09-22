@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\AABB.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\BVH\BVHSphere.cpp">
+      <Filter>src\Math\BVH</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Mat3x3.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Mat4x4.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Math_Util.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\OBB.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Quaternion.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Sphere.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Vec3.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Vec4.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Body.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Collisions.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Contacts.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\World.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\AABB.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\BVH\BVHDS.hpp">
+      <Filter>src\Math\BVH</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\BVH\BVHSphere.h">
+      <Filter>src\Math\BVH</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\GeometricUtility.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Mat3x3.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Mat4x4.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Math_Util.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\OBB.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Quaternion.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Sphere.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Vec3.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Math\Vec4.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Body.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Collisions.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Contacts.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\World.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include\CrunchMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{A2824896-816A-3980-AB96-AD823C7A4724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{6D9F7622-9C2D-347A-BEED-99BB45D0A392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Math">
+      <UniqueIdentifier>{817CFD4E-3F56-3FE3-BA82-50DC493BB1D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Math\BVH">
+      <UniqueIdentifier>{880FFDE2-43AD-31C2-BCD7-5E981ADE069B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Physics">
+      <UniqueIdentifier>{267ABF17-FC31-30B5-83D8-55BDC4FE6F99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

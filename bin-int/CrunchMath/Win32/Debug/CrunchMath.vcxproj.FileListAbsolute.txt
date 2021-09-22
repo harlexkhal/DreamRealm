@@ -1,2 +1,0 @@
-C:\MyCareer\GameEngineDev\DreamRealm\bin\CrunchMath\Win32\Debug\CrunchMath.pdb
-C:\MyCareer\GameEngineDev\DreamRealm\bin-int\CrunchMath\Win32\Debug\CrunchMath.pdb

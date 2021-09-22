@@ -3,7 +3,7 @@
 Camera::Camera(float fov, float aspectratio, float near, float far)
 	:FOV(fov), AspectRatio(aspectratio), NearPlane(near), FarPlane(far)
 {
-	Velocity = 10.0f;
+	Velocity = 60.0f;
 	Up = CrunchMath::Vec3(0.0f, 1.0f, 0.0f);
 	Position = CrunchMath::Vec3(0.0f, 0.0f, 0.0f);
 	Front = CrunchMath::Vec3(0.0f, 0.0f, -1.0f);
@@ -61,16 +61,16 @@ void Camera::SetFOV(float fov)
 void Camera::CameraControl(GLFWwindow* window, float dt)
 {
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-		Position += (Velocity * dt) * Front;
+		Position += Front * (Velocity * dt);
 
 	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-		Position -= (Velocity * dt) * Front;
+		Position -= Front * (Velocity * dt);
 
 	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-		Position += (Velocity * dt) * CrunchMath::CrossProduct(Front, Up);
+		Position += CrunchMath::CrossProduct(Front, Up) * (Velocity * dt);
 
 	else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-		Position += (Velocity * dt) * CrunchMath::CrossProduct(Up, Front);
+		Position += CrunchMath::CrossProduct(Up, Front) * (Velocity * dt);
 }
 
 void Camera::OnUpdate(GLFWwindow* window, float dt)
