@@ -37,7 +37,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj"
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateAssimpLibsDebugSymbolsAndDLLs", "Dependencies\assimp\UpdateAssimpLibsDebugSymbolsAndDLLs.vcxproj", "{DC017448-77F0-3391-A6FD-63B5C9ED2205}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateAssimpLibsDebugSymbolsAndDLLs", "Dependencies\Assimp\UpdateAssimpLibsDebugSymbolsAndDLLs.vcxproj", "{DC017448-77F0-3391-A6FD-63B5C9ED2205}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
@@ -46,47 +46,47 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vc
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "assimp", "Dependencies\assimp\code\assimp.vcxproj", "{DC0DE631-ED3F-3D54-AE52-432B05EECADF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "assimp", "Dependencies\Assimp\code\assimp.vcxproj", "{DC0DE631-ED3F-3D54-AE52-432B05EECADF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 		{97E20D61-D48F-30ED-8E2A-B15DC2399EA2} = {97E20D61-D48F-30ED-8E2A-B15DC2399EA2}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "assimp_cmd", "Dependencies\assimp\tools\assimp_cmd\assimp_cmd.vcxproj", "{4976D222-C32A-380B-B1E1-FE860C9289C3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "assimp_cmd", "Dependencies\Assimp\tools\assimp_cmd\assimp_cmd.vcxproj", "{4976D222-C32A-380B-B1E1-FE860C9289C3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 		{DC0DE631-ED3F-3D54-AE52-432B05EECADF} = {DC0DE631-ED3F-3D54-AE52-432B05EECADF}
 		{97E20D61-D48F-30ED-8E2A-B15DC2399EA2} = {97E20D61-D48F-30ED-8E2A-B15DC2399EA2}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "Dependencies\glad\glad.vcxproj", "{B26E37FC-C04F-3590-B2F1-2D2CC4D260FA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "Dependencies\GLAD\glad.vcxproj", "{B26E37FC-C04F-3590-B2F1-2D2CC4D260FA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "Dependencies\glfw\src\glfw.vcxproj", "{B52FABFE-63E3-37EA-9087-180415539DC8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "Dependencies\GLFW\src\glfw.vcxproj", "{B52FABFE-63E3-37EA-9087-180415539DC8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "Dependencies\assimp\uninstall.vcxproj", "{331DC68B-40B1-38E9-9B3F-D71BECAF54A0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uninstall", "Dependencies\Assimp\uninstall.vcxproj", "{331DC68B-40B1-38E9-9B3F-D71BECAF54A0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unit", "Dependencies\assimp\test\unit.vcxproj", "{22D62C53-CBC1-3AD9-A613-1E54836BC35C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unit", "Dependencies\Assimp\test\unit.vcxproj", "{22D62C53-CBC1-3AD9-A613-1E54836BC35C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 		{DC0DE631-ED3F-3D54-AE52-432B05EECADF} = {DC0DE631-ED3F-3D54-AE52-432B05EECADF}
 		{97E20D61-D48F-30ED-8E2A-B15DC2399EA2} = {97E20D61-D48F-30ED-8E2A-B15DC2399EA2}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "update_mappings", "Dependencies\glfw\src\update_mappings.vcxproj", "{C6BC5A6C-6415-37EF-B26E-BC281DB0731E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "update_mappings", "Dependencies\GLFW\src\update_mappings.vcxproj", "{C6BC5A6C-6415-37EF-B26E-BC281DB0731E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlibstatic", "Dependencies\assimp\contrib\zlib\zlibstatic.vcxproj", "{97E20D61-D48F-30ED-8E2A-B15DC2399EA2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlibstatic", "Dependencies\Assimp\contrib\zlib\zlibstatic.vcxproj", "{97E20D61-D48F-30ED-8E2A-B15DC2399EA2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{22DC13A0-666E-3DDB-9385-86CB9B7619D8} = {22DC13A0-666E-3DDB-9385-86CB9B7619D8}
 	EndProjectSection

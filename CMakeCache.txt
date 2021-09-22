@@ -18,7 +18,7 @@
 ASSIMP_ANDROID_JNIIOSYSTEM:BOOL=OFF
 
 //Path for archive output files
-ASSIMP_ARCHIVE_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/lib
+ASSIMP_ARCHIVE_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/lib
 
 //Enable AddressSanitizer.
 ASSIMP_ASAN:BOOL=OFF
@@ -99,7 +99,7 @@ ASSIMP_INSTALL:BOOL=ON
 ASSIMP_INSTALL_PDB:BOOL=ON
 
 //Path for library output files
-ASSIMP_LIBRARY_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/bin
+ASSIMP_LIBRARY_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/bin
 
 //Suffix to append to library names
 ASSIMP_LIBRARY_SUFFIX:STRING=
@@ -121,19 +121,19 @@ ASSIMP_PACKAGE_VERSION:STRING=0
 ASSIMP_RAPIDJSON_NO_MEMBER_ITERATOR:BOOL=ON
 
 //Path for runtime output files
-ASSIMP_RUNTIME_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/bin
+ASSIMP_RUNTIME_OUTPUT_DIRECTORY:STRING=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/bin
 
 //Enable Undefined Behavior sanitizer.
 ASSIMP_UBSAN:BOOL=OFF
 
 //Value Computed by CMake
-Assimp_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp
+Assimp_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp
 
 //Value Computed by CMake
 Assimp_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Assimp_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp
+Assimp_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp
 
 //Build shared libraries
 BUILD_SHARED_LIBS:BOOL=ON
@@ -385,7 +385,7 @@ DreamRealm_IS_TOP_LEVEL:STATIC=OFF
 DreamRealm_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/DreamRealm
 
 //Value Computed by CMake
-GLFW_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/glfw
+GLFW_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/GLFW
 
 //Build the GLFW documentation
 GLFW_BUILD_DOCS:BOOL=ON
@@ -402,8 +402,12 @@ GLFW_INSTALL:BOOL=ON
 //Value Computed by CMake
 GLFW_IS_TOP_LEVEL:STATIC=OFF
 
+//Library type override for GLFW (SHARED, STATIC, OBJECT, or empty
+// to follow BUILD_SHARED_LIBS)
+GLFW_LIBRARY_TYPE:STRING=
+
 //Value Computed by CMake
-GLFW_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/glfw
+GLFW_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/GLFW
 
 //Force use of high-performance GPU on hybrid systems
 GLFW_USE_HYBRID_HPG:BOOL=OFF
@@ -436,22 +440,22 @@ ZLIB_LIBRARY_REL:FILEPATH=ZLIB_LIBRARY_REL-NOTFOUND
 assimp_LIB_DEPENDS:STATIC=general;zlibstatic;
 
 //Value Computed by CMake
-glad_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/glad
+glad_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD
 
 //Value Computed by CMake
 glad_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-glad_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/glad
+glad_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD
 
 //Value Computed by CMake
-zlib_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/contrib/zlib
+zlib_BINARY_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/contrib/zlib
 
 //Value Computed by CMake
 zlib_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-zlib_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/contrib/zlib
+zlib_SOURCE_DIR:STATIC=C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/contrib/zlib
 
 
 ########################
@@ -630,6 +634,10 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//GLFW pkg-config Libs.private
+GLFW_PKG_CONFIG_LIBS_PRIVATE:INTERNAL= -lgdi32
+//GLFW pkg-config Requires.private
+GLFW_PKG_CONFIG_REQUIRES_PRIVATE:INTERNAL=
 //Have function fseeko
 HAVE_FSEEKO:INTERNAL=
 //Result of TRY_COMPILE

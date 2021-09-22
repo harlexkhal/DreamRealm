@@ -1,3 +1,2 @@
-﻿  Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt
-  glad.c
-  glad.vcxproj -> C:\Dev\MyProjects\DreamRealm\Dependencies\glad\Debug\gladd.lib
+﻿  Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt
+  glad.vcxproj -> C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\Debug\gladd.lib

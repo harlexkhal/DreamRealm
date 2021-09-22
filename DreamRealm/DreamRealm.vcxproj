@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;GLFW_DLL;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -114,7 +114,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\Dependencies\CrunchMath\Debug\CrunchMath.lib;..\Dependencies\glfw\src\Debug\glfw3ddll.lib;..\Dependencies\glad\Debug\gladd.lib;..\Dependencies\assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Dependencies\CrunchMath\Debug\CrunchMathd.lib;..\Dependencies\GLFW\src\Debug\glfw3ddll.lib;..\Dependencies\GLAD\Debug\gladd.lib;..\Dependencies\Assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -146,10 +146,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -157,7 +157,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\Dependencies\CrunchMath\Release\CrunchMath.lib;..\Dependencies\glfw\src\Release\glfw3dll.lib;..\Dependencies\glad\Release\glad.lib;..\Dependencies\assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Dependencies\CrunchMath\Release\CrunchMath.lib;..\Dependencies\GLFW\src\Release\glfw3dll.lib;..\Dependencies\GLAD\Release\glad.lib;..\Dependencies\Assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -172,7 +172,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -200,7 +200,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\Dependencies\CrunchMath\MinSizeRel\CrunchMath.lib;..\Dependencies\glfw\src\MinSizeRel\glfw3dll.lib;..\Dependencies\glad\MinSizeRel\glad.lib;..\Dependencies\assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Dependencies\CrunchMath\MinSizeRel\CrunchMath.lib;..\Dependencies\GLFW\src\MinSizeRel\glfw3dll.lib;..\Dependencies\GLAD\MinSizeRel\glad.lib;..\Dependencies\Assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -215,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -231,10 +231,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;GLFW_DLL;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\code;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\include;C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\DreamRealm;C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\include;C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\include;C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -242,7 +242,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\Dependencies\CrunchMath\RelWithDebInfo\CrunchMath.lib;..\Dependencies\glfw\src\RelWithDebInfo\glfw3dll.lib;..\Dependencies\glad\RelWithDebInfo\glad.lib;..\Dependencies\assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\Dependencies\CrunchMath\RelWithDebInfo\CrunchMath.lib;..\Dependencies\GLFW\src\RelWithDebInfo\glfw3dll.lib;..\Dependencies\GLAD\RelWithDebInfo\glad.lib;..\Dependencies\Assimp\lib\Debug\assimp-vc142-mtd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -349,11 +349,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{1D284D8E-1A2C-363C-9E79-0E6B52E1C9CE}</Project>
       <Name>CrunchMath</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\glad.vcxproj">
+    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\glad.vcxproj">
       <Project>{B26E37FC-C04F-3590-B2F1-2D2CC4D260FA}</Project>
       <Name>glad</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glfw\src\glfw.vcxproj">
+    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLFW\src\glfw.vcxproj">
       <Project>{B52FABFE-63E3-37EA-9087-180415539DC8}</Project>
       <Name>glfw</Name>
     </ProjectReference>

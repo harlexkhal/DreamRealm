@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.8)
 project(DreamRealm LANGUAGES CXX)
 
 add_subdirectory(Dependencies/CrunchMath)
-add_subdirectory(Dependencies/assimp)
-add_subdirectory(Dependencies/glad)
-add_subdirectory(Dependencies/glfw)
+add_subdirectory(Dependencies/Assimp)
+add_subdirectory(Dependencies/GLAD)
+add_subdirectory(Dependencies/GLFW)
 add_subdirectory(DreamRealm)
 
 # default startup project for Visual Studio

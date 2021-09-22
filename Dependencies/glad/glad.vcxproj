@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glad.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gladd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glad.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glad.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glad.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -95,10 +95,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -128,10 +128,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -161,10 +161,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -177,7 +177,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>
@@ -193,10 +193,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,11 +208,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeLists.txt">
+    <CustomBuild Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -221,11 +221,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -234,11 +234,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -247,11 +247,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -260,14 +260,14 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\src\glad.c" />
-    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include\glad\glad.h" />
-    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\include\KHR\khrplatform.h" />
+    <ClCompile Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\src\glad.c" />
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include\glad\glad.h" />
+    <ClInclude Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\include\KHR\khrplatform.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\ZERO_CHECK.vcxproj">

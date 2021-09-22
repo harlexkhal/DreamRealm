@@ -1,6 +1,6 @@
 # CMake generation dependency list for this directory.
 C:/Dev/MyProjects/DreamRealm/CMakeFiles/3.21.2/CMakeCCompiler.cmake
-C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt
+C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt
 C:/cmake/share/cmake-3.21/Modules/CMakeCInformation.cmake
 C:/cmake/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake
 C:/cmake/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake

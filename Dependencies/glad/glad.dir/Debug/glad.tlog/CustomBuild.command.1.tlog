@@ -1,6 +1,6 @@
 ^C:\DEV\MYPROJECTS\DREAMREALM\DEPENDENCIES\GLAD\CMAKELISTS.TXT
 setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

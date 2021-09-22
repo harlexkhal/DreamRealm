@@ -1,5 +1,4 @@
-﻿  Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/CrunchMath/CMakeLists.txt
-  AABB.cpp
+﻿  AABB.cpp
   BVHSphere.cpp
   Mat3x3.cpp
   Mat4x4.cpp
@@ -48,4 +47,4 @@ C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\Contacts.cpp(57
 C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\World.cpp(42,22): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
 C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\src\Physics\World.cpp(97): warning C4715: 'CrunchMath::World::CreateBody': not all control paths return a value
-  CrunchMath.vcxproj -> C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\Debug\CrunchMath.lib
+  CrunchMath.vcxproj -> C:\Dev\MyProjects\DreamRealm\Dependencies\CrunchMath\Debug\CrunchMathd.lib

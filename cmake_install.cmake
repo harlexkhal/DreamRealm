@@ -35,9 +35,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Dev/MyProjects/DreamRealm/Dependencies/CrunchMath/cmake_install.cmake")
-  include("C:/Dev/MyProjects/DreamRealm/Dependencies/assimp/cmake_install.cmake")
-  include("C:/Dev/MyProjects/DreamRealm/Dependencies/glad/cmake_install.cmake")
-  include("C:/Dev/MyProjects/DreamRealm/Dependencies/glfw/cmake_install.cmake")
+  include("C:/Dev/MyProjects/DreamRealm/Dependencies/Assimp/cmake_install.cmake")
+  include("C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/cmake_install.cmake")
+  include("C:/Dev/MyProjects/DreamRealm/Dependencies/GLFW/cmake_install.cmake")
   include("C:/Dev/MyProjects/DreamRealm/DreamRealm/cmake_install.cmake")
 
 endif()

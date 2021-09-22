@@ -191,7 +191,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\assimp\contrib\zlib\ALL_BUILD.vcxproj">
+    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\Assimp\contrib\zlib\ALL_BUILD.vcxproj">
       <Project>{E6500D5B-CCEF-3E09-B363-1AEA5658A0E6}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

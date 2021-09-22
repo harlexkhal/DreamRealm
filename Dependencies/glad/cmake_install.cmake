@@ -1,4 +1,4 @@
-# Install script for directory: C:/Dev/MyProjects/DreamRealm/Dependencies/glad
+# Install script for directory: C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

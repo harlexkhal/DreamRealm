@@ -1,5 +1,5 @@
 #define STB_IMAGE_IMPLEMENTATION
-#include "../../Dependencies/stb/stb_image.h"
+#include "../../Dependencies/STB/stb_image.h"
 #include <glad/glad.h>
 #include <iostream>
 #include <string>

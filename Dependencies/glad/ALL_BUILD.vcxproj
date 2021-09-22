@@ -105,11 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeLists.txt">
+    <CustomBuild Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -118,11 +118,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -131,11 +131,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -144,11 +144,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/glad/CMakeFiles/generate.stamp
+C:\cmake\bin\cmake.exe -SC:/Dev/MyProjects/DreamRealm -BC:/Dev/MyProjects/DreamRealm --check-stamp-file C:/Dev/MyProjects/DreamRealm/Dependencies/GLAD/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -157,7 +157,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\CMakeFiles\3.21.2\CMakeCCompiler.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.21\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.21\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.21\Modules\Platform\Windows-MSVC.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
@@ -170,7 +170,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\glad\glad.vcxproj">
+    <ProjectReference Include="C:\Dev\MyProjects\DreamRealm\Dependencies\GLAD\glad.vcxproj">
       <Project>{B26E37FC-C04F-3590-B2F1-2D2CC4D260FA}</Project>
       <Name>glad</Name>
     </ProjectReference>
