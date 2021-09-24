@@ -19,7 +19,7 @@ DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API w
 * Antialiancing
 * Instancing
 * Deferred Shading Technique
-* Shadow mapping
+* Shadow Mapping
 * Bloom Effects
 * HDR
 * Rainbow light
@@ -67,11 +67,10 @@ Some screenshots along the way of developing:
 ![env4.gif](Resources/Features/Environment-Simulation/env4.gif)
 ![env5.gif](Resources/Features/Environment-Simulation/env5.gif)
 ![Scene2.gif](Resources/Features/Scene2.gif)
-![env6.gif](Resources/Features/Environment-Simulation/env6.gif)
 
 ## Built With
+* [OpenGL](https://www.opengl.org/) - API used for communicating with graphics drivers
 * [GLFW3](https://www.glfw.org/) - Used for display, reading inputs, and handling events
-* [OpenGL](https://www.opengl.org/) - API used for communication with graphics drivers
 * [CrunchMath](https://github.com/harlexkhal/CrunchMath) - Used for graphics related calculations
 * [Open Asset Import Library (assimp)](http://assimp.org/) - Used for loading meshes
 * [STB image](https://github.com/nothings/stb/blob/master/stb_image.h) - Used for loading images/textures 
