@@ -1,4 +1,4 @@
-c:\dev\myprojects\dreamrealm\dependencies\crunchmath\debug\crunchmath.pdb
+c:\dev\myprojects\dreamrealm\dependencies\crunchmath\debug\crunchmathd.pdb
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\world.obj
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\contacts.obj
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\collisions.obj
@@ -13,7 +13,6 @@ c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\mat4x4
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\mat3x3.obj
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\bvhsphere.obj
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\aabb.obj
-c:\dev\myprojects\dreamrealm\dependencies\crunchmath\debug\crunchmathd.pdb
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\cmakefiles\generate.stamp
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\debug\crunchmathd.lib
 c:\dev\myprojects\dreamrealm\dependencies\crunchmath\crunchmath.dir\debug\crunchmath.tlog\cl.command.1.tlog

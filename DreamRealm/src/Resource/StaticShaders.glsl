@@ -59,6 +59,15 @@ uniform vec3 ViewPos;
 
 vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir);
 
+float near = 0.1;
+float far = 500.0;
+
+float LinearizeDepth(float depth)
+{
+	float z = depth * 2.0 - 1.0;
+	return (2.0 * near * far) / (far + near - z * (far - near));
+}
+
 void main()
 {	
 		vec3 Ambient = DirLight.Ambient * texture(material.Diffuse, Texture).rgb;
@@ -68,7 +77,10 @@ void main()
 		vec3 LightDir = normalize(ViewPos - FragPos);
 
 		vec3 Result = CalculateDirectionalLight(DirLight, SurfaceNormal, LightDir);
-		FragColor = vec4(Result, 0.1);
+
+		float depth = LinearizeDepth(gl_FragCoord.z) / far;
+
+		FragColor = vec4(vec3(depth), 1.0) * vec4(0.6, 0.6, 0.6, 1.0) + vec4(Result, 1.0);
 }
 
 vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir)

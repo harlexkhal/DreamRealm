@@ -8,7 +8,7 @@
 #include "Camera.h"
 #include "Mesh.h"
 
-Camera FPS(72.0f, 1200 / 720, 0.1f, 500.0f);
+Camera FPS(72.0f, 1200 / 720, 0.1f, 5000.0f);
 
 void CamController(GLFWwindow* window, double xpos, double ypos)
 {
@@ -51,7 +51,7 @@ int main() {
 	SkyDome_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise5.bmp");
 	CrunchMath::Mat4x4 SkyDomeModel(1.0f);
 	SkyDomeModel.Translate(CrunchMath::Vec3(0.0f, -3.0f, 0.0f));
-	SkyDomeModel.Scale(CrunchMath::Vec3(100.0f, 100.0f, 500.0f));
+	SkyDomeModel.Scale(CrunchMath::Vec3(10.0f, 10.0f, 10.0f));
 	
 	Shader Sun_Shader;
 	Sun_Shader.Load("src/Resource/Sun.glsl");
@@ -63,10 +63,10 @@ int main() {
 	Terrain_Shader.Load("src/Resource/StaticShaders.glsl");
 	Mesh Terrain_Mesh;
 	Terrain_Mesh.LoadMesh();
-	Terrain_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise-texture4.jpg");
+	Terrain_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise-texture3.png");
 	CrunchMath::Mat4x4 TerrainModel(1.0f);
 	TerrainModel.Translate(CrunchMath::Vec3(0.0f, 0.0f, 0.0f));
-	TerrainModel.Scale(CrunchMath::Vec3(100.0f, 0.01f, 100.0f));
+	TerrainModel.Scale(CrunchMath::Vec3(1000.0f, 0.1f, 1000.0f));
 
 	Shader Object1_Shader;
 	Object1_Shader.Load("src/Resource/StaticShaders.glsl");
@@ -157,7 +157,7 @@ int main() {
 			glUniformMatrix4fv(glGetUniformLocation(Object1_Shader.Program, "Model"), 1, GL_FALSE, &Object1Model.Matrix[0][0]);
 			Object1_Mesh.Render();
 		}
-
+		
 		std::vector<CrunchMath::Mat4x4> Transforms;
 		/*MeshModel.BoneTransform(glfwGetTime(), Transforms);
 
