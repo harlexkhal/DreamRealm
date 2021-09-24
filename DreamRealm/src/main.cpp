@@ -56,7 +56,7 @@ int main() {
 	Shader Sun_Shader;
 	Sun_Shader.Load("src/Resource/Sun.glsl");
 	CrunchMath::Mat4x4 SunModel(1.0f);
-	SunModel.Translate(CrunchMath::Vec3(0.0f, 20.0f, -100.0f));
+	SunModel.Translate(CrunchMath::Vec3(0.0f, -1.0f, -100.0f));
 	SunModel.Scale(CrunchMath::Vec3(5.0f, 5.0f, 5.0f));
 
 	Shader Terrain_Shader;
@@ -83,9 +83,9 @@ int main() {
 	FPS.SetCameraPosition(CrunchMath::Vec3(15.0f, 30.0f, 40.0f));
 
 	glEnable(GL_DEPTH_TEST);
-	float bias = -0.5f;
+	float bias = 0.0f;
 	float nscale = -1.0f;
-	float Rotate = 0.0f;
+	float Rotate = -0.9f;
 	while (!glfwWindowShouldClose(Window))
 	{
 		float CurrentFrame = glfwGetTime();//static_cast<float>(clock()) / CLOCKS_PER_SEC;
@@ -118,7 +118,6 @@ int main() {
 			glUniformMatrix4fv(glGetUniformLocation(SkyDome_Shader.Program, "Model"), 1, GL_FALSE, &SkyDomeModel.Matrix[0][0]);
 			SkyDome_Mesh.Render();
 		}
-		glDepthMask(GL_TRUE);
 
 		{
 			Sun_Shader.Use();
@@ -127,6 +126,7 @@ int main() {
 			glUniformMatrix4fv(glGetUniformLocation(Sun_Shader.Program, "Model"), 1, GL_FALSE, &SunModel.Matrix[0][0]);
 			SkyDome_Mesh.Render();
 		}
+		glDepthMask(GL_TRUE);
 
 		{
 		    Terrain_Shader.Use();
