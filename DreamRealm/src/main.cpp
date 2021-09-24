@@ -56,8 +56,8 @@ int main() {
 	Shader Sun_Shader;
 	Sun_Shader.Load("src/Resource/Sun.glsl");
 	CrunchMath::Mat4x4 SunModel(1.0f);
-	SunModel.Translate(CrunchMath::Vec3(0.0f, 42.0f, -100.0f));
-	SunModel.Scale(CrunchMath::Vec3(1.0f, 1.0f, 1.0f));
+	SunModel.Translate(CrunchMath::Vec3(0.0f, 20.0f, -100.0f));
+	SunModel.Scale(CrunchMath::Vec3(5.0f, 5.0f, 5.0f));
 
 	Shader Terrain_Shader;
 	Terrain_Shader.Load("src/Resource/StaticShaders.glsl");

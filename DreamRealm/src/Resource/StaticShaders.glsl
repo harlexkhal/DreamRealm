@@ -80,7 +80,7 @@ void main()
 
 		float depth = LinearizeDepth(gl_FragCoord.z) / far;
 
-		FragColor = vec4(vec3(depth), 1.0) * vec4(0.6, 0.6, 0.6, 1.0) + vec4(Result, 1.0);
+		FragColor = vec4(vec3(depth), 1.0) * /*vec4(0.6, 0.6, 0.6, 1.0)*/vec4(normalize(vec3(231,148,20)), 1.0) + vec4(Result, 1.0);
 }
 
 vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir)

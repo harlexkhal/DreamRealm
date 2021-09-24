@@ -1,3 +1,4 @@
+
 #Shader Vertex
 
 #version 330 core
@@ -35,9 +36,9 @@ const float PI = 3.14159265;
 
 uniform float Bias;
 uniform float nscale;
-vec4 sky = vec4(normalize(vec3(135,206,235)), 1.0);//vec4(.3, .5, .8, 1.0);
+vec4 sky = vec4(.3, .5, .8, 1.0);
 
-vec4 cloud = vec4(0.9, 0.9, 0.9, 1.0);
+vec4 cloud = vec4(normalize(vec3(231,148,20)), 1.0);//vec4(0.9, 0.9, 0.9, 1.0);
 void main()
 {	
 		vec4 Result = texture(NoiseTexture, nscale * Texture);
