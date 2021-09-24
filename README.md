@@ -65,11 +65,9 @@ DreamRealm.exe from there or alternatively run it from the compiler.
 Some screenshots along the way of developing:
 ![env2.gif](Resources/Features/Environment-Simulation/env2.gif)
 ![env4.gif](Resources/Features/Environment-Simulation/env4.gif)
-![env3.png](Resources/Features/Environment-Simulation/env3.png)
 ![env5.gif](Resources/Features/Environment-Simulation/env5.gif)
-![env6.gif](Resources/Features/Environment-Simulation/env6.gif)
 ![Scene2.gif](Resources/Features/Scene2.gif)
-![env1.png](Resources/Features/Environment-Simulation/env1.png)
+![env6.gif](Resources/Features/Environment-Simulation/env6.gif)
 
 ## Built With
 * [GLFW3](https://www.glfw.org/) - Used for display, reading inputs, and handling events
