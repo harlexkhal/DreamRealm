@@ -63,13 +63,13 @@ Now navigate to ``` DreamRealm ``` by going one directory backwards and copy the
 DreamRealm.exe from there or alternatively run it from the compiler.
 
 Some screenshots along the way of developing:
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env2.gif)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env4.gif)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env3.png)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env5.gif)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env6.gif)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/Scene2.gif)
-![](https://github.com/harlexkhal/DreamRealm/tree/main/Resources/Features/Environment-Simulation/env1.png)
+![env2.gif](Resources/Features/Environment-Simulation/env2.gif)
+![env4.gif](Resources/Features/Environment-Simulation/env4.gif)
+![env3.png](Resources/Features/Environment-Simulation/env3.png)
+![env5.gif](Resources/Features/Environment-Simulation/env5.gif)
+![env6.gif](Resources/Features/Environment-Simulation/env6.gif)
+![Scene2.gif](Resources/Features/Scene2.gif)
+![env1.png](Resources/Features/Environment-Simulation/env1.png)
 
 ## Built With
 * [GLFW3](https://www.glfw.org/) - Used for display, reading inputs, and handling events
