@@ -4,7 +4,7 @@ project(DreamRealm LANGUAGES CXX)
 
 add_subdirectory(Dependencies/CrunchMath)
 add_subdirectory(Dependencies/Assimp)
-add_subdirectory(Dependencies/GLAD)
+add_subdirectory(Dependencies/glad)
 add_subdirectory(Dependencies/GLFW)
 add_subdirectory(DreamRealm)
 
