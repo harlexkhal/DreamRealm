@@ -39,6 +39,5 @@ vec4 sky = vec4(.3, .5, .8, 1.0);
 vec4 cloud = vec4(1.0, 1.0, 1, 1.0);
 void main()
 {	
-
-	FragColor = vec4(.9,.9,.9, 1.0);
+	FragColor = vec4(normalize(vec3(231,148,20)), 1.0);//vec4(.9,.9,.9, 1.0);
 }

@@ -1,6 +1,3 @@
-[submodule "Esmath/Submodule/Esmath"]
-	path = Esmath/Submodule/Esmath
-	url = https://github.com/harlexkhal/Esmath
 [submodule "Dependencies/GLFW"]
 	path = Dependencies/GLFW
 	url = https://github.com/glfw/glfw
