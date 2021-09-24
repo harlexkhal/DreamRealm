@@ -1,4 +1,3 @@
-
 #Shader Vertex
 
 #version 330 core
@@ -36,19 +35,19 @@ const float PI = 3.14159265;
 
 uniform float Bias;
 uniform float nscale;
-vec4 sky = vec4(.3, .5, .8, 1.0);
-vec4 cloud = vec4(1.0, 1.0, 1, 1.0);
+vec4 sky = vec4(normalize(vec3(135,206,235)), 1.0);//vec4(.3, .5, .8, 1.0);
+
+vec4 cloud = vec4(0.9, 0.9, 0.9, 1.0);
 void main()
 {	
-
 		vec4 Result = texture(NoiseTexture, nscale * Texture);
 
 		float sum = ( 3.* Result.r + Result.g + Result.b + Result.a - 2. ) / 2.;
         sum = ( 1. + cos(PI * sum) ) / 2.;
         float t = clamp( Bias + sum, 0., 1. );
 
-        vec3 color = mix( sky.rgb, cloud.rgb, t);
-
+        vec3 color = mix(sky.rgb, cloud.rgb, t);
+		
         color *= vec3(0.9, 0.9, 0.9);
 
 		FragColor = vec4(color, 1.0);

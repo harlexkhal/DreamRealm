@@ -1,1 +1,8 @@
-﻿  DreamRealm.vcxproj -> C:\Dev\MyProjects\DreamRealm\DreamRealm\Debug\DreamRealm.exe
+﻿  Main.cpp
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(15,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(15,27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(91,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(99,20): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(101,20): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Dev\MyProjects\DreamRealm\DreamRealm\src\Main.cpp(103,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  DreamRealm.vcxproj -> C:\Dev\MyProjects\DreamRealm\DreamRealm\Debug\DreamRealm.exe
