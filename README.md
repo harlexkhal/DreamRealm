@@ -19,7 +19,7 @@ DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API w
 * Deferred Shading Technique
 * Shadow Mapping
 * Bloom Effects
-* High Dynamic Range Rendering (HDR)
+* High Dynamic Range Rendering (HDRR)
 * Physical Based Rendering (PBR)
 * Rainbow light
 * Text Rendering
