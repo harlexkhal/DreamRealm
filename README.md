@@ -1,5 +1,4 @@
 # DreamRealm
-DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API with upcoming support for Vulkan
 
 ## Details:
 DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API with upcoming support for Vulkan
@@ -16,7 +15,7 @@ DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API w
 * [GLFW](https://github.com/glfw/glfw) support for windows creation, reading input, handling events
 
 ### Features to be implemented:
-* Antialiancing
+* Anti-aliasing
 * Instancing
 * Deferred Shading Technique
 * Shadow Mapping
@@ -27,7 +26,7 @@ DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API w
 * Level Editor
 * Vulkan Support
 * Voxel Rendering
-* RayTracing
+* Ray tracing
 
 ## More Detailed Roadmap of DreamRealm:
 * [Project Todo's, Inprogress Backlogs ...'](https://github.com/users/harlexkhal/projects/3)
@@ -47,7 +46,7 @@ git clone --recursive https://github.com/harlexkhal/DreamRealm <Your-Build-Direc
 ```
 
 ### Building project with Cmake and building binaries
-This program have been tested on Windows 10 and binaries built with visual studio 2019. but should work under any systems that fulfills the aforementioned requirements.
+This program has been tested on Windows 10 and binaries built with visual studio 2019. but should work under any system that fulfils the aforementioned requirements.
 
 #### Building Project Solution Files
 Make sure to set the environmental path variable of cmake. then on the parent directory of the project using cli. run
