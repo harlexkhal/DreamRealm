@@ -1,8 +1,7 @@
 # DreamRealm
-
-## Details:
 DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API with upcoming support for Vulkan
 
+## Details:
 ### Features implemented so far are:
 * Cmake support
 * Environment Light (Point light, Directional light)
@@ -15,21 +14,22 @@ DreamRealm is a 3D Rendering Engine built with C++ and the Opengl graphics API w
 * [GLFW](https://github.com/glfw/glfw) support for windows creation, reading input, handling events
 
 ### Features to be implemented:
-* Anti-aliasing
+* Anti-aliasing (MSAA Technique)
 * Instancing
 * Deferred Shading Technique
 * Shadow Mapping
 * Bloom Effects
-* HDR
+* High Dynamic Range Rendering (HDR)
+* Physical Based Rendering (PBR)
 * Rainbow light
 * Text Rendering
 * Level Editor
 * Vulkan Support
 * Voxel Rendering
-* Ray tracing
+* Ray Tracing
 
 ## More Detailed Roadmap of DreamRealm:
-* [Project Todo's, Inprogress Backlogs ...'](https://github.com/users/harlexkhal/projects/3)
+* [Project Todo's, Inprogress & Backlogs](https://github.com/users/harlexkhal/projects/3)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
