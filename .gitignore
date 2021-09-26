@@ -13,5 +13,5 @@ Dependencies/GLAD/Debug/
 Dependencies/CrunchMath/Debug/
 CMakeCache.txt
 cmake_install.cmake
-x64/
-CMakeFiles/
+**/x64/
+**/CMakeFiles/
