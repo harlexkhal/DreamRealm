@@ -70,6 +70,8 @@ float LinearizeDepth(float depth)
 
 void main()
 {	
+		vec3 Ambient = DirLight.Ambient * texture(material.Diffuse, Texture).rgb;
+
 		//Diffuse
 		vec3 SurfaceNormal = normalize(Normal);
 		vec3 LightDir = normalize(ViewPos - FragPos);
@@ -86,9 +88,9 @@ vec3 CalculateDirectionalLight(DirectionalLight light, vec3 normal, vec3 viewDir
     vec3 lightDir = normalize(-light.Direction);
     float diff = max(dot(normal, lightDir), 0.0);
     vec3 reflectDir = reflect(-lightDir, normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), material.Shine);
-    vec3 ambient = light.Ambient * vec3(texture(material.Diffuse, Texture));
-    vec3 diffuse = light.Diffuse * diff * vec3(texture(material.Diffuse, Texture));
-    vec3 specular = light.Specular * spec * vec3(texture(material.Specular, Texture));
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0); //material shine = 32
+    vec3 ambient = light.Ambient * vec3(0.2, 0.2, 0.2);
+    vec3 diffuse = light.Diffuse * diff * vec3(0.5, 0.5, 0.5);
+    vec3 specular = light.Specular * spec * vec3(1.0, 1.0, 1.0);
     return (ambient + diffuse + specular);
 }

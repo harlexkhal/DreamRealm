@@ -60,7 +60,7 @@ int main() {
 	SunModel.Scale(CrunchMath::Vec3(5.0f, 5.0f, 5.0f));
 
 	Shader Terrain_Shader;
-	Terrain_Shader.Load("src/Resource/StaticShaders.glsl");
+	Terrain_Shader.Load("src/Resource/Terrain.glsl");
 	Mesh Terrain_Mesh;
 	Terrain_Mesh.LoadMesh();
 	Terrain_Mesh.LoadTexture("src/Resource/Defaults/Textures/noise-texture3.png");
